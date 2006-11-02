@@ -1,6 +1,6 @@
 require 'test/unit'
 
-class 00EnkoderTest < Test::Unit::TestCase
+class EnkoderTagsTest < Test::Unit::TestCase
   # Replace this with your real tests.
   def test_this_plugin
     flunk
