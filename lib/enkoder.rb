@@ -1,7 +1,7 @@
 # Copyright (c) 2006, Automatic Corp.
 # All rights reserved.
 #
-# Modified by Sean Santry (sean at seansantry.com) for use with the Radiant CMS
+# Modified by Sean Santry (http://seansantry.com/) for use with the Radiant CMS
 # (http://radiantcms.org).
 #   o Refactored to look more like the RedCloth API
 #   o Removed extra space that was added at the end of the generated script element
