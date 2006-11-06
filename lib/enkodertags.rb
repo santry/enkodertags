@@ -1,5 +1,7 @@
 require 'enkoder'
 
+class TagError < StandardError; end
+
 Behavior::Base.define_tags do
 
   tag "enkode" do |tag|
@@ -7,8 +9,15 @@ Behavior::Base.define_tags do
   end
 
   tag "enkode_mailto" do |tag|
+    attr = tag.attr.symbolize_keys
+    
+    raise TagError.new("Please provide an `email' attribute for the `enkode_mailto' tag.") unless attr.has_key?(:email)
+    
+    # default to using the email address as the link_text
+    link_text = attr[:link_text] || attr[:email]
+    
     Enkoder.new.enkode_mailto(
-      tag.attr['email'], tag.attr['link_text'], tag.attr['title_text'], tag.attr['subject']
+      attr[:email], link_text, attr[:title_text], attr[:subject]
     )
   end
 
