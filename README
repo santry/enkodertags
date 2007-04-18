@@ -1,8 +1,8 @@
 EnkoderTags
 ===========
-EnkoderTags is a plugin for the [Radiant CMS][1] that provides tags for hiding web content from robots using [Dan Benjamin's Enkoder][2]. 
+EnkoderTags is an extension for the [Radiant CMS][1] that provides tags for hiding web content from robots using [Dan Benjamin's Enkoder][2]. 
 
-The latest version is available at <http://seansantry.com/projects/enkodertags/> and from my subversion repository at <http://seansantry.com/svn/radiant/plugins/enkodertags/trunk>.
+The latest version is available at <http://seansantry.com/projects/enkodertags/> and from my subversion repository at <http://seansantry.com/svn/radiant/extensions/enkodertags/trunk>.
 	
 
 `enkode`

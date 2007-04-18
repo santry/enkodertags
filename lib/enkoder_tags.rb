@@ -1,8 +1,7 @@
-require 'enkoder'
+module EnkoderTags
+  include Radiant::Taggable
 
-class TagError < StandardError; end
-
-Behavior::Base.define_tags do
+  class TagError < StandardError; end
 
   tag "enkode" do |tag|
     Enkoder.new(tag.expand).enkode
@@ -21,5 +20,4 @@ Behavior::Base.define_tags do
     )
   end
 
-end  
-  
+end    
