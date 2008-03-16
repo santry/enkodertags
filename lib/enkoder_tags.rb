@@ -15,8 +15,14 @@ module EnkoderTags
     # default to using the email address as the link_text
     link_text = attr[:link_text] || attr[:email]
     
+    attrs = tag.attr.dup
+    attrs.delete('email')
+    attrs.delete('title_text')
+    attrs.delete('subject')
+    attrs.delete('link_text')
+    
     Enkoder.new.enkode_mailto(
-      attr[:email], link_text, attr[:title_text], attr[:subject]
+      attr[:email], link_text, attr[:title_text], attr[:subject], attrs
     )
   end
 

@@ -42,8 +42,8 @@ class Enkoder < String
     enkode_it(self)
   end
 
-  def enkode_mailto( email, link_text, title_text=nil, subject=nil )
-    enkode_mail( email, link_text, title_text, subject )
+  def enkode_mailto( email, link_text, title_text=nil, subject=nil, attrs=nil )
+    enkode_mail( email, link_text, title_text, subject, attrs )
   end
 
   private
@@ -110,13 +110,21 @@ class Enkoder < String
 
       end
       
-      def enkode_mail( email, link_text, title_text=nil, subject=nil )
+      def enkode_mail( email, link_text, title_text=nil, subject=nil, attrs=nil )
         str = String.new
-        str << '<a href="mailto:' + email
-        str << '?subject=' + subject unless subject.nil?
-        str << '" title="'
-        str << title_text unless title_text.nil?
-        str << '">' + link_text + '</a>'
+        str << %Q(<a href="mailto:#{email})
+        str << %Q(?subject=#{subject}) unless subject.nil?
+        str << '"'
+        
+        str << %Q( title="#{title_text}") unless title_text.nil?
+        
+        # add any extra attributes the caller included
+        unless attrs.nil?
+          str << " " + attrs.inject('') { |s, (k, v)| s << %{#{k.downcase}="#{v}" } }.strip
+        end
+        
+        str << %Q(>#{link_text}</a>)
+        
         enkode_it(str)
       end
 

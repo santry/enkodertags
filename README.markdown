@@ -116,6 +116,37 @@ which is obfuscated as
 	;var i,c,x;while(eval(kode));}hivelogic_enkoder();
 	/* ]]> */
 	</script>
+	
+You can also include extra HTML attributes in the `enkode_mailto` tag. These attributes
+will simply be copied as-is into the resulting HTML. For example, the code 
+
+    <r:enkode_mailto email="example@example.com" link_text="simple email example"
+        class="enkodedlink"/>
+        
+will produce the HTML 
+
+    <a href="mailto:example@example.com" class="enkodedlink">simple email example</a>
+    
+which is obfuscated as
+
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    function hivelogic_enkoder(){var kode=
+    "kode=\"x=edok})c(edoCrahCmorf.gnirtS=+x;821=+c)0<c(fi;3-)i(tAedoCrahc.edok"+
+    "=c{)++i;htgnel.edok<i;0=i(rof;''=x;\\\">,**=,40kwjqho1hgrn+wDudkf1hgrnBkwj"+
+    "qho1hgrn?l+.{@hgrn000\\\\,l+wDudkf1hgrn.,4.l+wDudkf1hgrn@.{~,5@.l>,40kwjqh"+
+    "o1hgrn+?l>3@l+uri>**@{>%>*,=*4,k0jwhq1oghnrw+uDkd1fghnrkBjwhq1oghnrl?.+@{g"+
+    "hnr,000\\\\+lDwdufkh1rg.n4,l.w+uDkd1fghnr.@~{5,.@>l4,k0jwhq1oghnr?+>l@3+lr"+
+    "u>i**{@%_>h{r@000\\\\gfnh,r+ugkFpduF1rqiujVl.w>@5{@;f43.f,i?>+0ll6w,h+rDug"+
+    "kF1dgfnhfr,@.~>.wlqkojhhr1?g>n@l+3rl>u*i{*%_@>__~Ckjuq33____i3k/u.xjnIsgxI"+
+    "4utlxmYo1zAC8~C>i761i/lBA.3oo9z/k.uGxjnI4gjiqkiu/C1100\\\\A1zotnrmkku4BjAq"+
+    "Co.6uoAx-l~-(C0A12r0sw2xn7{1771\\\\|{n2n07}0u1|rnyx7Fmmttn+xxD~mnl}v000\\"+
+    "\\wr7n{+}E1)e{joqen+Fvere}jCu100\\\\xvnujIy100\\\\nvnuj7yxnel+v)eue|lFje|e"+
+    "ew+xnntumwmer+tGerey|nvnuj)uvnrj)y100\\\\nv8uGEejD+F2m+tnCxj(qk@u__%_hgrn@"+
+    "%_ghnr%@hgrn\\\"=edok\";kode=kode.split('').reverse().join('')"
+    ;var i,c,x;while(eval(kode));}hivelogic_enkoder();
+    /* ]]> */
+    </script>
 
 
 Acknowledgments
