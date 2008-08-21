@@ -2,7 +2,9 @@ EnkoderTags
 ===========
 EnkoderTags is an extension for the [Radiant CMS][1] that provides tags for hiding web content from robots using [Dan Benjamin's Enkoder][2]. 
 
-You can [download the latest version as a ZIP archive](http://seansantry.com/projects/enkodertags/enkodertags-latest.zip) or get the code from my git repository at `git://github.com/santry/enkodertags.git`. The [original subversion repository](http://seansantry.com/svn/radiant/extensions/enkodertags/trunk">) is also still available and up to date.
+The latest version is available on [GitHub][5]. When cloning, ensure your clone is named `enkoder_tags`:
+
+        git clone git://github.com/santry/enkodertags.git vendor/extensions/enkoder_tags
 	
 
 `enkode`
@@ -160,3 +162,4 @@ And no thanks to the spammers who make this kind of thing necessary. Ugh.
 [2]: http://hivelogic.com/articles/2006/02/07/enkoder_plugin
 [3]: http://wiseheartdesign.com/
 [4]: http://hivelogic.com/	
+[5]: http://github.com/santry/enkodertags/
